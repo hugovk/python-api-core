@@ -426,6 +426,7 @@ def test_create_channel_implicit_with_ssl_creds(
 
     composite_creds_call.assert_called_once_with(ssl_creds, mock.ANY)
     composite_creds = composite_creds_call.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
@@ -507,6 +508,7 @@ def test_create_channel_explicit(grpc_secure_channel, auth_creds, composite_cred
     )
 
     assert channel is grpc_secure_channel.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
@@ -530,6 +532,7 @@ def test_create_channel_explicit_scoped(grpc_secure_channel, composite_creds_cal
     credentials.with_scopes.assert_called_once_with(scopes, default_scopes=None)
 
     assert channel is grpc_secure_channel.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
@@ -557,6 +560,7 @@ def test_create_channel_explicit_default_scopes(
     )
 
     assert channel is grpc_secure_channel.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
@@ -582,6 +586,7 @@ def test_create_channel_explicit_with_quota_project(
     credentials.with_quota_project.assert_called_once_with("project-foo")
 
     assert channel is grpc_secure_channel.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
@@ -610,6 +615,7 @@ def test_create_channel_with_credentials_file(
     )
 
     assert channel is grpc_secure_channel.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
@@ -641,6 +647,7 @@ def test_create_channel_with_credentials_file_and_scopes(
     )
 
     assert channel is grpc_secure_channel.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
@@ -672,6 +679,7 @@ def test_create_channel_with_credentials_file_and_default_scopes(
     )
 
     assert channel is grpc_secure_channel.return_value
+
     if grpc_helpers.HAS_GRPC_GCP:
         grpc_secure_channel.assert_called_once_with(target, composite_creds, None)
     else:
