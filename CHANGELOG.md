@@ -4,6 +4,28 @@
 
 [1]: https://pypi.org/project/google-api-core/#history
 
+## [2.11.1](https://github.com/googleapis/python-api-core/compare/v2.11.0...v2.11.1) (2023-06-12)
+
+
+### Bug Fixes
+
+* Add actionable errors for GCE long running operations ([#498](https://github.com/googleapis/python-api-core/issues/498)) ([7dfc3a7](https://github.com/googleapis/python-api-core/commit/7dfc3a7a439243f05238a11b68a31720fde1769e))
+* Invalid `dev` version identifiers in `setup.py` ([#505](https://github.com/googleapis/python-api-core/issues/505)) ([8844edb](https://github.com/googleapis/python-api-core/commit/8844edb1e802040810918a12bc9ff89104da38d4))
+
+## [2.11.0](https://github.com/googleapis/python-api-core/compare/v2.10.2...v2.11.0) (2022-11-10)
+
+
+### Features
+
+* Add support for Python 3.11 ([#466](https://github.com/googleapis/python-api-core/issues/466)) ([ff379e3](https://github.com/googleapis/python-api-core/commit/ff379e304c353bcab734e1c4706b74b356a1e932))
+* Allow representing enums with their unqualified symbolic names in headers ([#465](https://github.com/googleapis/python-api-core/issues/465)) ([522b98e](https://github.com/googleapis/python-api-core/commit/522b98ecc1ebd1c2280d3d7c73a02f6e4fb528d4))
+
+
+### Bug Fixes
+
+* Major refactoring of Polling, Retry and Timeout logic ([#462](https://github.com/googleapis/python-api-core/issues/462)) ([434253d](https://github.com/googleapis/python-api-core/commit/434253de16d9efdf984ddb64c409706cda1d5f82))
+* Require google-auth &gt;= 2.14.1 ([#463](https://github.com/googleapis/python-api-core/issues/463)) ([7cc329f](https://github.com/googleapis/python-api-core/commit/7cc329fe1498b0a4285123448e4ea80c6a780d47))
+
 ## [2.10.2](https://github.com/googleapis/python-api-core/compare/v2.10.1...v2.10.2) (2022-10-08)
 
 
