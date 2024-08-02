@@ -1,9 +1,8 @@
 name: "Unit tests"
 
 on:
+  push:
   pull_request:
-    branches:
-      - main
 
 jobs:
   run-unittests:
